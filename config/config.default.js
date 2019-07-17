@@ -2,9 +2,8 @@
 
 'use strict';
 
-/**
- * @param {Egg.EggAppInfo} appInfo app info
- */
+const path = require('path');
+
 module.exports = appInfo => {
   /**
    * built-in config
@@ -23,6 +22,11 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  // 定义日志路径
+  exports.logger = {
+      dir: path.resolve(__dirname, '../buildlogs'),
+  };
+
   // redis配置
   config.redis = {
       client: {
@@ -35,7 +39,12 @@ module.exports = appInfo => {
 
   // mongoose配置
   config.mongoose = {
-      clients: dbclients,
+    client:{
+        url: 'mongodb://127.0.0.1:27019/palment',
+        options: {
+            poolSize: 20,
+        },
+    }
   };
 
   return {
