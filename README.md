@@ -2,6 +2,8 @@
 
 Palment--前端性能监控系统，主要基于Egg、Koa2、MongoDB、Redis 的架构，监控前端性能、JS报错、HTTP监控、Ajax慢接口、UV、PV、用户分析 等， 提供一站式前端监控平台
 
+现在功能还没完善，团队内部开发中，待开发测试完成后，再开源出来分享给大家，谢谢大家star || watch
+
 ## QuickStart
 
 <!-- add docs here for user -->
